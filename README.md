@@ -8,7 +8,7 @@
 </p>
 
 
-## Requirement
+## Kebutuhan
 
 1. PHP v8
 2. Composer
