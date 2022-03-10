@@ -1,0 +1,173 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Test API",
+        "version": "1.0"
+    },
+    "paths": {
+        "/api/input/proses": {
+            "post": {
+                "tags": [
+                    "Input"
+                ],
+                "summary": "Input data no handphone",
+                "description": "Input data no handphone",
+                "operationId": "inputproses",
+                "parameters": [
+                    {
+                        "name": "no",
+                        "in": "query",
+                        "description": "no handphone",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "providers",
+                        "in": "query",
+                        "description": "input id providers",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "sukses input no handphone"
+                    }
+                }
+            }
+        },
+        "/api/input/auto": {
+            "get": {
+                "tags": [
+                    "Input"
+                ],
+                "summary": "Input data auto no handphone",
+                "description": "Input data auto no handphone",
+                "operationId": "inputauto",
+                "responses": {
+                    "200": {
+                        "description": "sukses input no handphone"
+                    }
+                }
+            }
+        },
+        "/api/output": {
+            "get": {
+                "tags": [
+                    "Output"
+                ],
+                "summary": "Tampil data output",
+                "description": "Tampil data output",
+                "operationId": "output",
+                "responses": {
+                    "200": {
+                        "description": "sukses tampil output"
+                    }
+                }
+            }
+        },
+        "/api/output/detail": {
+            "post": {
+                "tags": [
+                    "Output"
+                ],
+                "summary": "Detail data handphone",
+                "description": "Detail data handphone",
+                "operationId": "detail",
+                "parameters": [
+                    {
+                        "name": "id_handphones",
+                        "in": "query",
+                        "description": "id handphone",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "sukses detail handphone"
+                    }
+                }
+            }
+        },
+        "/api/output/edit": {
+            "post": {
+                "tags": [
+                    "Output"
+                ],
+                "summary": "Edit data handphone",
+                "description": "Edit data handphone",
+                "operationId": "edit",
+                "parameters": [
+                    {
+                        "name": "id_handphones",
+                        "in": "query",
+                        "description": "id handphone",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "no_handphones",
+                        "in": "query",
+                        "description": "no handphone",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "providers_id",
+                        "in": "query",
+                        "description": "id provider",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "sukses edit handphone"
+                    }
+                }
+            }
+        },
+        "/api/output/delete": {
+            "post": {
+                "tags": [
+                    "Output"
+                ],
+                "summary": "Hapus data handphone",
+                "description": "Hapus data handphone",
+                "operationId": "hapus",
+                "parameters": [
+                    {
+                        "name": "id_handphones",
+                        "in": "query",
+                        "description": "id handphone",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "sukses hapus handphone"
+                    }
+                }
+            }
+        }
+    },
+    "security": [
+        []
+    ]
+}
