@@ -7,6 +7,13 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+
+## Requirement
+
+1. PHP v8
+2. Composer
+3. PostgreSQL
+
 ## Cara Penggunaan
 
 1. Download file simpan di localhost
