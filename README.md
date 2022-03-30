@@ -22,5 +22,7 @@
 4. Restore database. file berada di folder databasefile
 5. Ubah file .env sesuaikan db, username, password sesuai dengan konfigurasi PostgreSQL anda
 6. Buka terminal arahkan ke folder project, ketik "php artisan serve"
-7. Akses di browser "localhost:8000"
-8. Untuk API bisa diakses di browser dengan mengetik "localhost:8000/api/documentation"
+7. Buka terminal arahkan ke folder project, ketik "php artisan websockets:serve"
+8. Akses di browser "localhost:8000"
+9. Untuk API bisa diakses di browser dengan mengetik "localhost:8000/api/documentation"
+10. Untuk Websocket bisa diakses di browser dengan mengetik "localhost:8000/laravel-websockets"
