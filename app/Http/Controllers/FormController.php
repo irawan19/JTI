@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Custom;
+use App\Events\GetRequestEvent;
 
 class FormController extends Controller
 {
@@ -57,6 +58,8 @@ class FormController extends Controller
 				'updated_at'	=> date('Y-m-d H:i:s')
 			];
 			\App\Models\Handphone::insert($handphones_data);
+
+			event(new GetRequestEvent($handphones_data));
 
 			$hasil = [
 				'status'	=> true,

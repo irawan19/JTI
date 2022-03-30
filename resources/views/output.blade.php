@@ -39,6 +39,7 @@
                                         </table>
                                     </div>
                                 </div>
+                                <div id="div-data"></div>
                             </div>
                             <div class="card-footer right-align">
                                 <button id="edit" class="btn btn-primary" type="submit" name="simpan" value="simpan">
@@ -97,6 +98,7 @@
         </main>
     </div>
 
+    <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
     <script type="text/javascript">
         jQuery(document).ready(function () {
             tampilData();
@@ -270,6 +272,19 @@
                 $('#handphone'+idhandphones).removeClass('tdselect');
             }
         }
+
+        var pusher = new Pusher('d69c9212a435ce90ccfd', {
+          cluster: 'ap1'
+        });
+        var channel = pusher.subscribe('GetRequestEvent');
+        channel.bind('EventTriggered', function(data) {
+            $('#outputtableganjil tbody > tr > td').remove();
+            $('#outputtablegenap tbody > tr > td').remove();
+            tampilData();
+            const audio = new Audio("./notif/notif.mp3");
+            audio.play();
+        });
+
     </script>
     
 </x-app-layout>
